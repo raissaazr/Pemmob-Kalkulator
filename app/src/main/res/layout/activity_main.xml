@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvJudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Kalkulator"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvLabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvJudul"
+        android:layout_marginTop="16dp"
+        android:text="Angka Pertama" />
+
+    <EditText
+        android:id="@+id/etAngka1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLabel1"
+        android:layout_marginTop="4dp"
+        android:inputType="numberDecimal"
+        android:hint="Masukkan angka pertama" />
+
+    <TextView
+        android:id="@+id/tvLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etAngka1"
+        android:layout_marginTop="8dp"
+        android:text="Angka Kedua" />
+
+    <EditText
+        android:id="@+id/etAngka2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLabel2"
+        android:layout_marginTop="4dp"
+        android:inputType="numberDecimal"
+        android:hint="Masukkan angka kedua" />
+
+    <Button
+        android:id="@+id/btnTambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etAngka2"
+        android:layout_marginTop="16dp"
+        android:text="+"
+        android:onClick="tambah" />
+
+    <Button
+        android:id="@+id/btnKurang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etAngka2"
+        android:layout_toRightOf="@id/btnTambah"
+        android:layout_marginTop="16dp"
+        android:text="-"
+        android:onClick="kurang" />
+
+    <Button
+        android:id="@+id/btnKali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etAngka2"
+        android:layout_toRightOf="@id/btnKurang"
+        android:layout_marginTop="16dp"
+        android:text="×"
+        android:onClick="kali" />
+
+    <Button
+        android:id="@+id/btnBagi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etAngka2"
+        android:layout_toRightOf="@id/btnKali"
+        android:layout_marginTop="16dp"
+        android:text="÷"
+        android:onClick="bagi" />
+
+    <Button
+        android:id="@+id/btnModulus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnTambah"
+        android:layout_marginTop="8dp"
+        android:text="Modulus (%)"
+        android:onClick="modulus" />
+
+    <TextView
+        android:id="@+id/tvHasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnModulus"
+        android:layout_marginTop="24dp"
+        android:text="Hasil: "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
